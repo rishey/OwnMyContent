@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -51,11 +48,13 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
+  gem 'sqlite3'
 end
 
 group :production do
   gem 'rails_12factor' # for heroku
   gem 'unicorn' # web server
+  gem 'pg' # use postgres as database in production
 end
 
 group :assets do
