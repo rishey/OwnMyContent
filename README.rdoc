@@ -1,5 +1,16 @@
-Project description:
-Own my stuff is a service for locating and archiving your user created media on the web.
+#Project description:
+Own my stuff is a service for locating and archiving your user created media on the web. This project was created in October 2013.
+
+Typical user story:
+User logs in with Dropbox. Once logged in, the user can submit the URL of a podcast feed, and OwnYourStuff will:
+ - parse the feed to find the media enclosures
+ - download the media files and extract their metadata
+ - upload the media files to the OwnYourStuff folder of the User's Dropbox account
+Dropbox will then sync the files to the user's local machine. OwnYourStuff will also generate a HTML file with links to the media files on the user's computer and their metadata, which acts as a directory of the user's content.
+
+======
+
+#Dev Info
 
 mp3 meta tag gem info:
 http://rdoc.info/github/moumar/ruby-mp3info/master/frames
@@ -14,7 +25,7 @@ statuses:
 
 for ENCLOSURES:
 Downloading                   - STARTED DOWNLOADING
-Waiting to Upload             - FINSIHED DOWNLOADEING
+Waiting to Upload             - FINSIHED DOWNLOADING
 Uploading                     - STARTED UPLOAD
 Complete                      - FINISHED UPLOADING
 Download Failed. Will retry.  - WAITING FOR RETRY DOWNLOAD
@@ -29,31 +40,11 @@ empty    (no enclosures)
 
 
 
-== README
+#TODO: Improve this readme. We should probably include:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
+* Version info
 * System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* How to get Own Your Stuff up and running on your machine
+* Next steps for the project
+* Known issues
+* How to contribute
